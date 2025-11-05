@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ resume.name }} - Resume</title>
+</head>
+<body>
+    <div class="header">
+        <div class="name">{{ resume.name }}</div>
+        <div class="contact">
+            {{ resume.email }} | {{ resume.phone }}
+        </div>
+    </div>
+    
+    <div class="content">
+        {{ resume.content | safe }}
+    </div>
+</body>
+</html>

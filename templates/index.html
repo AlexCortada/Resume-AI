@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>🤖 Resume AI</h1>
+
+<div class="info">
+    <strong>🎯 How it works:</strong><br>
+    1. Paste your current resume<br>
+    2. Paste the job description<br>
+    3. AI customizes your resume to match the job<br>
+    4. Download professionally formatted PDF<br>
+    <br>
+    <strong>🔒 Your data never leaves this server</strong>
+</div>
+
+<form method="POST" action="/process">
+    <div class="form-group">
+        <label for="resume_text">📄 Your Resume:</label>
+        <textarea id="resume_text" name="resume_text" required 
+                  placeholder="Paste your complete resume here..."></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="job_description">💼 Job Description:</label>
+        <textarea id="job_description" name="job_description" required 
+                  placeholder="Paste the job description here..."></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="template">🎨 Resume Template:</label>
+        <select id="template" name="template">
+            <option value="modern">Modern</option>
+            <option value="professional">Professional</option>
+        </select>
+    </div>
+    
+    <button type="submit">✨ Generate Customized Resume</button>
+</form>
+{% endblock %}
